@@ -1,0 +1,44 @@
+---
+# Additionnal page configuration
+
+# Additionnal configurations are loaded using its file name, minus the extension, as an anchor (https://<mydashboad>#<config>). 
+# `config.yml` is still used as a base configuration, and all values here will overwrite it, so you don't have to re-defined everything
+
+
+subtitle: "this is another dashboard page"
+
+# This overwrites message config. Setting it to empty to remove message from this page and keep it only in the main one:
+message: View Ragnarok SOPs
+
+# as we want to include a differente link here (so we can get back to home page), we need to replicate all links or they will be revome when overwriting the links field:
+links:
+  - name: "Home"
+    icon: "fas fa-home"
+    url: "#"
+  - name: "HLS - SOPs"
+    icon: "fas fa-book"
+    url: "https://confluence.mtvi.com/display/GMOPS"
+    target: "_blank" # optional html a tag target attribute
+
+services:
+  - name: "Ragnarok Dashboards"
+    icon: "fas fa-cloud"
+    items:
+      - name: "Ragnarok PROG - 10"
+        logo: "assets/tools/rok.jpg"
+        subtitle: "All Programmer ID 10 IRDs"
+        tag: "Monitoring"
+        url: "http://cird.ragnarok.link.s3-website-us-east-1.amazonaws.com/?id=10"
+        target: "_blank" # optional html a tag target attribute
+      - name: "HLS-01 IRDs"
+        logo: "assets/tools/rok.jpg"
+        subtitle: "All HLS-01 IRDs"
+        tag: "Monitoring, HLS-01"
+        url: "http://cird.ragnarok.link.s3-website-us-east-1.amazonaws.com/?id=10&system=VIA-HLS-01"
+        target: "_blank" # optional html a tag target attribute
+      - name: "HLS-03 IRDs"
+        logo: "assets/tools/rok.jpg"
+        subtitle: "All HLS-03 IRDs"
+        tag: "Monitoring, HLS-03, SHO"
+        url: "http://cird.ragnarok.link.s3-website-us-east-1.amazonaws.com/?id=10&system=SHO-HLS-03"
+        target: "_blank" # optional html a tag target attribute

@@ -1,0 +1,176 @@
+---
+# Homepage configuration
+# See https://fontawesome.com/icons for icons options
+
+title: "Dashboard"
+subtitle: "Global Broadcast Operations"
+logo: "logo.png"
+# icon: "fas fa-skull-crossbones" # Optional icon
+
+header: true
+footer: false
+
+# Optional theme customization
+theme: default
+colors:
+  light:
+    highlight-primary: "#3367d6"
+    highlight-secondary: "#4285f4"
+    highlight-hover: "#5a95f5"
+    background: "#f5f5f5"
+    card-background: "#ffffff"
+    text: "#363636"
+    text-header: "#ffffff"
+    text-title: "#303030"
+    text-subtitle: "#424242"
+    card-shadow: rgba(0, 0, 0, 0.1)
+    link-hover: "#363636"
+  dark:
+    highlight-primary: "#3367d6"
+    highlight-secondary: "#4285f4"
+    highlight-hover: "#5a95f5"
+    background: "#131313"
+    card-background: "#2b2b2b"
+    text: "#eaeaea"
+    text-header: "#ffffff"
+    text-title: "#fafafa"
+    text-subtitle: "#f5f5f5"
+    card-shadow: rgba(0, 0, 0, 0.4)
+    link-hover: "#ffdd57"
+
+# Optional message
+message:
+  style: "is-dark" # See https://bulma.io/documentation/components/message/#colors for styling options.
+  title: "Alerts"
+  icon: "fas fa-exclamation-triangle"
+  content: "Evertz NoW Deployment today 5/4 from 11a-3p est. Transfers and Jobs will be Offline and Channels Inhibited"
+
+# Optional navbar
+# links: [] # Allows for navbar (dark mode, layout, and search) without any links
+links:
+  - name: "Confulence - SOPs"
+    icon: "fas fa-book"
+    url: "https://confluence.mtvi.com/display/GMOPS"
+    target: "_blank" # optional html a tag target attribute
+  - name: "Operational Alerts"
+    icon: "fas fa-exclamation-triangle"
+    url: "https://xyz"
+  # this will link to a second homer page that will load config from additionnal-page.yml and keep default config values as in config.yml file
+  # see url field and assets/additionnal-page.yml.dist used in this example:
+  # - name: "another page!"
+  #  icon: "fas fa-file-alt"
+  #  url: "#additionnal-page" 
+
+# Services
+# First level array represent a group.
+# Leave only a "items" key if not using group (group name, icon & tagstyle are optional, section separation will not be displayed).
+services:
+  - name: "Mediator TX1 Production"
+    icon: "fas fa-cloud"
+    items:
+      - name: "US East TX1 PROD"
+        logo: "assets/tools/mediator.png"
+        subtitle: "US East TX1 Mediator - Production"
+        tag: "Mediator"
+        url: "http://tx-production.msc.cbs.net/mediator-ui/"
+        target: "_blank" # optional html a tag target attribute
+      - name: "EU West TX1 PROD"
+        logo: "assets/tools/mediator.png"
+        subtitle: "US West TX1 Mediator - Production"
+        tag: "Mediator"
+        url: "http://mediator-eu-1-prod-nlb-79ee1677890dae8c.elb.eu-west-1.amazonaws.com/mediator-ui/"
+        target: "_blank" # optional html a tag target attribute
+  - name: "Mediator TX2 Production"
+    icon: "fas fa-cloud"
+    items:
+      - name: "US East TX2 PROD"
+        logo: "assets/tools/mediator.png"
+        subtitle: "US East TX2 Mediator - Production"
+        tag: "Mediator"
+        url: "http://txyz"
+        target: "_blank" # optional html a tag target attribute
+      - name: "EU West TX2 PROD"
+        logo: "assets/tools/mediator.png"
+        subtitle: "US West TX2 Mediator - Production"
+        tag: "Mediator"
+        url: "http://xyz"
+        target: "_blank" # optional html a tag target attribute
+  - name: "Mediator UAT"
+    icon: "fas fa-cloud"
+    items:
+      - name: "US East TX1 UAT"
+        logo: "assets/tools/mediator.png"
+        subtitle: "US East TX1 Mediator - UAT"
+        tag: "Mediator UAT"
+        url: "http://uat-production.msc.cbs.net/mediator-ui/"
+        target: "_blank" # optional html a tag target attribute
+      - name: "EU West TX1 UAT"
+        logo: "assets/tools/mediator.png"
+        subtitle: "US West TX1 Mediator - UAT"
+        tag: "Mediator UAT"
+        url: "http://mediator-eu-1-uat-nlb-fd92f767263fb8a1.elb.eu-west-1.amazonaws.com/mediator-ui/"
+        target: "_blank" # optional html a tag target attribute
+      - name: "US East TX2 UAT"
+        logo: "assets/tools/mediator.png"
+        subtitle: "US East TX2 Mediator - UAT"
+        tag: "Mediator UAT"
+        url: "http://xyz"
+        target: "_blank" # optional html a tag target attribute
+      - name: "EU West TX2 UAT"
+        logo: "assets/tools/mediator.png"
+        subtitle: "US West TX2 Mediator - UAT"
+        tag: "Mediator UAT"
+        url: "http://xyz"
+        target: "_blank" # optional html a tag target attribute
+  - name: "Monitoring Tools"
+    icon: "fas fa-search"
+    items:
+      - name: "Global Overview"
+        logo: "assets/tools/sample.png"
+        subtitle: "Global Overview Dashboard"
+        tag: "Monitoring"
+        url: "http://xyz"
+        target: "_blank" # optional html a tag target attribute
+      - name: "DataMiner"
+        logo: "assets/tools/sample.png"
+        subtitle: "Dataminer App"
+        tag: "Monitoring"
+        url: "http://xyz"
+        target: "_blank" # optional html a tag target attribute
+      - name: "Ragnarok Monitors"
+        logo: "assets/tools/rok.jpg"
+        subtitle: "Ragnarok Health Dashboards"
+        tag: "Monitoring"
+        url: "#rag"
+        target: "_blank" # optional html a tag target attribute
+      - name: "Orion"
+        logo: "assets/tools/sample.png"
+        subtitle: "Orion Monitoring"
+        tag: "Monitoring"
+        url: "http://xyz"
+        target: "_blank" # optional html a tag target attribute
+      - name: "Media Proxy"
+        logo: "assets/tools/sample.png"
+        subtitle: "Media Proxy Air Check System"
+        tag: "Monitoring"
+        url: "http://xyz"
+        target: "_blank" # optional html a tag target attribute
+  - name: "Reporting Tools"
+    icon: "fas fa-comment-alt"
+    items:
+      - name: "ServiceNow - Create a Harpoon"
+        logo: "assets/tools/sample.png"
+        subtitle: "Harpoon Reporting for On-air Outages"
+        tag: "Reporting"
+        url: "https://viacomcbs.service-now.com/nav_to.do?uri=%2Fexpert_shell.do%3Fsysparm_sys_id%3Dc702ed08db397b0005b4dda5ca961980%26sysparm_initial%3Dtrue"
+        target: "_blank" # optional html a tag target attribute
+      - name: "Shift Reports"
+        logo: "assets/tools/sample.png"
+        subtitle: "Shift Report Generation and Archive"
+        tag: "Reporting"
+        url: "https://confluence.mtvi.com/display/SNO/Shift+and+Daily+Status+Reports"
+        target: "_blank" # optional html a tag target attribute
+
+
+
+        
